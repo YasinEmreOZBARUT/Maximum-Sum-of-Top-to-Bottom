@@ -52,6 +52,7 @@ public class GFG {
 	    		System.out.print(arr[i][j]+"\t");
 	    	}
 	    }
+	    System.out.println();
 	    int total=maxFound(arr,0,0);
 	    System.out.println();
 	    System.out.println("The maximum sum from top to bottom:");
@@ -67,18 +68,19 @@ public class GFG {
 		for(int l=2;l<=(arr1[row][column])/2;l++) {
     		if((arr1[row][column])%l==0 && arr1[row][column]!=0) {
     			temp1=arr1[row][column];
-    			break;
+    			//break;
     		}
-    	}
-		for(int f=2;f<=(arr1[row][column+1])/2;f++) {
-    		if((arr1[row][column+1])%f==0 && arr1[row][column+1]!=0) {
+    		if((arr1[row][column+1])%l==0 && arr1[row][column+1]!=0) {
     			temp2=arr1[row][column+1];
-    			break;
+    			//break;
     		}
-    	
     	}
-		//System.out.print(arr1[row][column]+" "+arr1[row][column+1]);
-		//System.out.println();
+		//for(int f=2;f<=(arr1[row][column+1])/2;f++) {
+    		
+    	
+    	//}
+		System.out.print(arr1[row][column]+" "+arr1[row][column+1]);
+		System.out.println();
 		if(temp2==Math.max(temp1, temp2)) {
 			column+=1;}
 		
